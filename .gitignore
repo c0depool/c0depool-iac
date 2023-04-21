@@ -1,0 +1,38 @@
+# Trash
+.DS_Store
+Thumbs.db
+# Binaries
+bin
+/flux
+*.iso
+# Temp folders
+.temp*
+.private/
+.logs/
+.task/
+# Terraform
+.terraform*
+terraform.tfstate*
+*.tfstate
+.tfplan
+credentails.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Sops
+.secrets*
+.decrypted~*
+*.agekey
+sops-key*
+# Kubernetes
+kubeconfig*
+talosconfig*
+*.pub
+*.key
+# Extras
+config.xml
+*.pid
+kubernetes
