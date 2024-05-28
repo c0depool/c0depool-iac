@@ -36,3 +36,5 @@ talosconfig*
 config.xml
 *.pid
 kubernetes
+# VS Code
+.vscode
