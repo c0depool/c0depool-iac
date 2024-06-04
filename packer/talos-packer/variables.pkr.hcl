@@ -38,6 +38,10 @@ variable "talos_version" {
   default = "v1.6.7"
 }
 
+variable "base_iso_file" {
+  type    = string
+}
+
 locals {
   image = "https://github.com/talos-systems/talos/releases/download/${var.talos_version}/nocloud-amd64.raw.xz"
 }
