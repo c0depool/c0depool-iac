@@ -33,15 +33,20 @@ variable "cloudinit_storage_pool" {
   default = "local-lvm"
 }
 
+variable "vm_id" {
+  type    = string
+  default = "9700"
+}
+
 variable "talos_version" {
   type    = string
   default = "v1.6.7"
 }
 
 variable "base_iso_file" {
-  type    = string
+  type = string
 }
 
 locals {
-  image = "https://github.com/talos-systems/talos/releases/download/${var.talos_version}/nocloud-amd64.raw.xz"
+  image = "https://factory.talos.dev/image/613e1592b2da41ae5e265e8789429f22e121aab91cb4deb6bc3c0b6262961245/${var.talos_version}/nocloud-amd64.raw.xz"
 }

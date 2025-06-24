@@ -14,8 +14,11 @@ source "proxmox-iso" "talos" {
   node                     = var.proxmox_node
   insecure_skip_tls_verify = true
 
-  iso_file    = "${var.base_iso_file}"
-  unmount_iso = true
+  boot_iso {
+    type     = "scsi"
+    iso_file = "${var.base_iso_file}"
+    unmount  = true
+  }
 
   scsi_controller = "virtio-scsi-single"
   network_adapters {
@@ -23,22 +26,22 @@ source "proxmox-iso" "talos" {
     model  = "virtio"
   }
   disks {
-    type              = "scsi"
-    storage_pool      = var.proxmox_storage
-    format            = "raw"
-    disk_size         = "1500M"
-    io_thread         = true
-    cache_mode        = "writethrough"
+    type         = "scsi"
+    storage_pool = var.proxmox_storage
+    format       = "raw"
+    disk_size    = "2500M"
+    io_thread    = true
+    cache_mode   = "writethrough"
   }
 
-  memory               = 2048
-  vm_id                = "9700"
-  cores                = var.cores
-  cpu_type             = var.cpu_type
-  sockets              = "1"
-  ssh_username         = "root"
-  ssh_password         = "packer"
-  ssh_timeout          = "15m"
+  memory       = 2048
+  vm_id        = "${var.vm_id}"
+  cores        = var.cores
+  cpu_type     = var.cpu_type
+  sockets      = "1"
+  ssh_username = "root"
+  ssh_password = "packer"
+  ssh_timeout  = "15m"
 
   cloud_init              = true
   cloud_init_storage_pool = var.cloudinit_storage_pool

@@ -10,6 +10,8 @@ bin
 .private/
 .logs/
 .task/
+# Packer
+secrets.pkvars.hcl
 # Terraform
 .terraform*
 terraform.tfstate*
