@@ -1,0 +1,14 @@
+## VM Configuration ##
+nodes = {
+  "0" = {
+    name                = "gcp-tunnel"
+    image               = "projects/debian-cloud/global/images/debian-12-bookworm-v20250212"
+    machine_type        = "e2-micro"
+    template            = "user_data_tunnel.sh"
+    disk_encryption_key = "<Your disk encryption key>" # Refer https://cloud.google.com/compute/docs/disks/customer-supplied-encryption#required_key_format
+    disk_size           = 20
+    ssk_keys            = <<EOF
+      <Your SSH public keys>
+    EOF
+  }
+}

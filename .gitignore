@@ -24,6 +24,8 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+*.auto.tfvars
+*.tfplan*
 # Sops
 .secrets*
 .decrypted~*

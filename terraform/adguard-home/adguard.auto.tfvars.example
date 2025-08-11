@@ -1,0 +1,12 @@
+ct_name                  = "adguard-home"
+ct_cpu_cores             = "1"
+ct_memory                = 512
+ct_ipconfig              = "192.168.0.226/24"
+ct_gw                    = "192.168.0.1"
+ct_disk                  = "8"
+ssh_pri_key_path         = "/path/to/.ssh/id_rsa"
+ssh_pub_key              = <<EOT
+<Your SSH public keys>
+EOT
+adguard_home_config_path = "/path/to/backups/adguard-home/AdGuardHome.yaml"
+adguard_home_certs_path = "/path/to/ca-certs/adguard-home/doh"

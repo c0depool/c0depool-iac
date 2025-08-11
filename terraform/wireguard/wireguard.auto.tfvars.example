@@ -1,0 +1,12 @@
+ct_name           = "wireguard"
+ct_cpu_cores      = "1"
+ct_memory         = 1024
+ct_ipconfig       = "192.168.0.240/24"
+ct_gw             = "192.168.0.1"
+ct_disk           = "8"
+nameserver        = "1.1.1.1"
+external_endpoint = "<Public IP of Peer>"
+ssh_pri_key_path  = "<SSH private key path>"
+ssh_pub_key       = <<EOT
+<Your SSH public keys>
+EOT

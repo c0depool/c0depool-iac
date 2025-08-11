@@ -1,7 +1,7 @@
 variable "firewall_name" {
-    description = "Name of firewall"
-    type = string
-  
+  description = "Name of firewall"
+  type        = string
+
 }
 
 variable "inbound_rules" {

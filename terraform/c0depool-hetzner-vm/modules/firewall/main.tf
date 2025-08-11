@@ -4,10 +4,10 @@ resource "hcloud_firewall" "firewall" {
   dynamic "rule" {
     for_each = var.inbound_rules
     content {
-      direction   = "in"
-      protocol    = rule.value.protocol
-      port        = rule.value.port
-      source_ips  = rule.value.source_ips
+      direction  = "in"
+      protocol   = rule.value.protocol
+      port       = rule.value.port
+      source_ips = rule.value.source_ips
     }
   }
 }

@@ -13,3 +13,7 @@ variable "proxmox_api_token_secret" {
 variable "proxmox_node" {
   type = string
 }
+
+variable "nodes" {
+  type = any
+}
